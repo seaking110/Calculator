@@ -6,15 +6,15 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("계산기 프로그램을 시작합니다!");
-        ArithmeticCalculator cal = new ArithmeticCalculator();
+        ArithmeticCalculator <Double> cal = new ArithmeticCalculator();
         // exit를 받을 때까지 무한루프
         while (true) {
-            int num1 =0; // 첫번째 입력값
-            int num2 =0; // 두번째 입력값
+            double num1 =0; // 첫번째 입력값
+            double num2 =0; // 두번째 입력값
 
             //입력 부분
-            System.out.println("첫번째 0을 포함한 양의 정수를 입력하세요!");
-            num1 = sc.nextInt();
+            System.out.println("첫번째 실수를 입력하세요!");
+            num1 = sc.nextDouble();
 
             System.out.println("사칙연산 기호를 입력하세요!");
             char operation = sc.next().charAt(0);
@@ -24,8 +24,8 @@ public class App {
                 System.out.println("잘못된 사칙연산 기호를 입력하셨습니다! 다시 입력하세요!");
                 continue;
             }
-            System.out.println("두번째 0을 포함한 양의 정수를 입력하세요!");
-            num2 = sc.nextInt();
+            System.out.println("두번째 실수를 입력하세요!");
+            num2 = sc.nextDouble();
 
             // 계산 메소드를 호출하는 단계
             boolean issue = false; // 이슈 발생 여부 체크 변수
