@@ -35,7 +35,7 @@ public class App {
             // 계산 중 에러 발생 시 이슈 발생 여부 체크 변수의 값 변경 및 오류 메세지 출력
             try {
                 result = cal.calculate(num1, num2, operatorType);
-            } catch (CalculatorException e) {
+            } catch (DivideException e) {
                 issue = true;
                 System.out.println(e.getMessage());
             }

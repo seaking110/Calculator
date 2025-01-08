@@ -40,12 +40,6 @@
 ### 1. `App.java`
 사용자 입력 및 프로그램 흐름을 제어하는 메인 클래스입니다.
 
-public class App {
-    public static void main(String[] args) {
-        // 사용자 입력 처리 및 계산기 로직 실행
-    }
-}
-```
 
 ### 2. `ArithmeticCalculator<T>`
 실제 계산 로직과 결과 관리 기능을 제공하는 제네릭 클래스입니다.
