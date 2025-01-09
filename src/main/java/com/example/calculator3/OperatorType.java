@@ -4,7 +4,8 @@ public enum OperatorType {
     PLUS('+'),
     MINUS('-'),
     MULTIPLY('*'),
-    DIVIDE('/');
+    DIVIDE('/'),
+    MODULO('%');
 
     private final char type;
 
@@ -23,7 +24,9 @@ public enum OperatorType {
                 return operator;
             }
         }
-        return null; // 유효하지 않은 연산자일 경우
+        // 이미 입력 받을 때 검사를 진행
+        // 따라서 예외처리
+        throw new IllegalArgumentException("지원되지 않는 연산자입니다: " + op);
     }
 
 
